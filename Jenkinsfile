@@ -2,6 +2,7 @@ pipeline {
 
   environment {
     registryCredential = 'dockerhub'
+    imagefolder = "masterarbeithhz/microservices:"
     imagetag = "adminspace${env.BUILD_ID}"
     giturl = 'https://github.com/masterarbeithhz/BaseArchitecture_AdminSpace.git'
   }
@@ -19,7 +20,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("masterarbeithhz/microservices:${imagetag}")
+                    myapp = docker.build("${imagefolder}${imagetag}")
                 }
             }
         }
@@ -38,7 +39,7 @@ pipeline {
         steps {
           script {
             def data = readFile file: "kubmanifest.yaml"
-            data = data.replaceAll("JSVAR_DOCKERIMAGE", "${imagetag}")
+            data = data.replaceAll("JSVAR_DOCKERIMAGE", "${imagefolder}${imagetag}")
             echo data
             writeFile file: "kubmanifest.yaml", text: data
           }

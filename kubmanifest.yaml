@@ -45,4 +45,4 @@ spec:
     spec:
       containers:
       - name: admin
-        image: masterarbeithhz/microservices:JSVAR_DOCKERIMAGE
+        image: JSVAR_DOCKERIMAGE
