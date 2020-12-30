@@ -56,7 +56,7 @@ function register(){
 					  VALUES('$username', '$email', '$user_type', '$password')";
 			mysqli_query($db, $query);
 			$_SESSION['success']  = "New user successfully created!!";
-			header('location: http://192.168.99.100/admin/admin/home.php');
+			header('location: http://130.211.228.246/admin/admin/home.php');
 		}else{
 			$query = "INSERT INTO users (username, email, user_type, password) 
 					  VALUES('$username', '$email', 'user', '$password')";
@@ -67,7 +67,7 @@ function register(){
 
 			$_SESSION['user'] = getUserById($logged_in_user_id); // put logged in user in session
 			$_SESSION['success']  = "You are now logged in";
-			header('location: http://192.168.99.100/homepage/homepage.php');				
+			header('location: http://130.211.228.246/homepage/homepage.php');				
 		}
 	}
 }
@@ -113,7 +113,7 @@ function isLoggedIn()
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header("location: http://192.168.99.100/login/login.php");
+	header("location: http://130.211.228.246/login/login.php");
 }
 
 // call the login() function if register_btn is clicked
@@ -151,12 +151,12 @@ function login(){
 
 				$_SESSION['user'] = $logged_in_user;
 				$_SESSION['success']  = "You are now logged in";
-				header('location: http://192.168.99.100/admin/admin/home.php');		  
+				header('location: http://130.211.228.246/admin/admin/home.php');		  
 			}else{
 				$_SESSION['user'] = $logged_in_user;
 				$_SESSION['success']  = "You are now logged in";
 
-				header('location: http://192.168.99.100/homepage/homepage.php');
+				header('location: http://130.211.228.246/homepage/homepage.php');
 			}
 		}else {
 			array_push($errors, "Wrong username/password combination");
