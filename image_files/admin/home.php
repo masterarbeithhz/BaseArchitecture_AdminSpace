@@ -3,13 +3,13 @@ include('../functions.php');
 
 if (!isAdmin()) {
 	$_SESSION['msg'] = "You must log in first";
-	header('location: http://130.211.228.246/login/login.php');
+	header('location: http://hhz.regel-it.de/login/login.php');
 }
 
 if (isset($_GET['logout'])) {
 	session_destroy();
 	unset($_SESSION['user']);
-	header("location: http://130.211.228.246/login/login.php");
+	header("location: http://hhz.regel-it.de/login/login.php");
 }
 ?>
 <!DOCTYPE html>
