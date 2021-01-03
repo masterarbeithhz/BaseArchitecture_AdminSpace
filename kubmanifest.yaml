@@ -63,7 +63,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /admin/(.*)
+        - path: /JSVAR_NAMESPACE/admin/(.*)
           backend:
             serviceName: admin-service
             servicePort: 80
