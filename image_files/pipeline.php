@@ -16,7 +16,11 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 
 		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_blank" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="multiuserlogin">
-		    <input type="submit" name="submit" value="Submit">
+		    <input type="submit" name="submit" value="multiuserlogin">
+	    </form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_blank" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="adminspace">
+		    <input type="submit" name="submit" value="adminspace">
 	    </form>
 	</body>
 
@@ -32,7 +36,13 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 	$ch = curl_init();
 
 	// setze die URL und andere Optionen
-	curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+	if($_POST['pipeline'] == "multiuserlogin"){
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+	}elseif($_POST['pipeline'] == "adminspace"){
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+	}else{
+		echo "<h1>error</h1>";
+	}
 	curl_setopt($ch, CURLOPT_HEADER, 0);
 
 	// führe die Aktion aus und gib die Daten an den Browser weiter
