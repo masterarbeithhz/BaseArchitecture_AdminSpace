@@ -2,7 +2,6 @@
 <html>
 <head>
 	<title>Jenkins trigger</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
 	<style>
 		.header {
 			background: #003366;
