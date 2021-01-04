@@ -30,6 +30,8 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<p>Your browser does not support iframes.</p>
 		</iframe>
 
+		<h1>Jenkins Job triggers for the Base Architecture</h1>
+
 		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="multiuserlogin">
 			<input type="submit" name="submit" value="multiuserlogin">
@@ -65,6 +67,33 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="complete">
 			<input type="submit" name="submit" value="complete">
+		</form>
+
+		<h1>Jenkins Job triggers for the UseCase Architecture</h1>
+
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_administration">
+			<input type="submit" name="submit" value="uc_administration">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_database">
+			<input type="submit" name="submit" value="uc_database">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_databasejob">
+			<input type="submit" name="submit" value="uc_databasejob">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_processing">
+			<input type="submit" name="submit" value="uc_processing">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_visualization">
+			<input type="submit" name="submit" value="uc_visualization">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="uc_complete">
+			<input type="submit" name="submit" value="uc_complete">
 		</form>
 	</body>
 
@@ -107,6 +136,24 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 	} elseif ($_POST['pipeline'] == "complete") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Complete base architecture successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_administration") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Administration/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>UseCase Administration successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_database") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>UseCase Database successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_databasejob") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>UseCase Database Job Catalog successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_processing") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Processing/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>UseCase Processing successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_visualization") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Visualization/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>UseCase Visualization successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "uc_complete") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		echo "<h1>Complete UseCase architecture successfully created</h1>";
 	} else {
 		echo "<h1>error</h1>";
 	}
