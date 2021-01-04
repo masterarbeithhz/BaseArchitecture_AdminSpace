@@ -14,14 +14,18 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<h2>Jenkins trigger page</h2>
 		</div>
 
-		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_self" enctype="application/x-www-form-urlencoded">
+		<iframe src="demo_iframe.htm" name="iframe_a">
+			<p>Your browser does not support iframes.</p>
+		</iframe>
+
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="multiuserlogin">
-		    <input type="submit" name="submit" value="multiuserlogin">
-	    </form>
+			<input type="submit" name="submit" value="multiuserlogin">
+		</form>
 		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_self" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="adminspace">
-		    <input type="submit" name="submit" value="adminspace">
-	    </form>
+			<input type="submit" name="submit" value="adminspace">
+		</form>
 	</body>
 
 	</html>
@@ -36,11 +40,11 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 	$ch = curl_init();
 
 	// setze die URL und andere Optionen
-	if($_POST['pipeline'] == "multiuserlogin"){
+	if ($_POST['pipeline'] == "multiuserlogin") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-	}elseif($_POST['pipeline'] == "adminspace"){
+	} elseif ($_POST['pipeline'] == "adminspace") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-	}else{
+	} else {
 		echo "<h1>error</h1>";
 	}
 	curl_setopt($ch, CURLOPT_HEADER, 0);
