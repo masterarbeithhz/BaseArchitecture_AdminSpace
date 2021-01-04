@@ -22,9 +22,37 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<input type="hidden" name="pipeline" value="multiuserlogin">
 			<input type="submit" name="submit" value="multiuserlogin">
 		</form>
-		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_self" enctype="application/x-www-form-urlencoded">
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="adminspace">
 			<input type="submit" name="submit" value="adminspace">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="database">
+			<input type="submit" name="submit" value="database">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="databasejob">
+			<input type="submit" name="submit" value="databasejob">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="homepage">
+			<input type="submit" name="submit" value="homepage">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="landingpage">
+			<input type="submit" name="submit" value="landingpage">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="servicecatalog">
+			<input type="submit" name="submit" value="servicecatalog">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="signon">
+			<input type="submit" name="submit" value="signon">
+		</form>
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="iframe_a" enctype="application/x-www-form-urlencoded">
+			<input type="hidden" name="pipeline" value="complete">
+			<input type="submit" name="submit" value="complete">
 		</form>
 	</body>
 
@@ -42,9 +70,32 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 	// setze die URL und andere Optionen
 	if ($_POST['pipeline'] == "multiuserlogin") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Multiuserlogin successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "adminspace") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-	} else {
+		echo "<h1>Adminspace successfully created</h1>";
+	}elseif ($_POST['pipeline'] == "database") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Database successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "databasejob") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>DatabaseJob successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "homepage") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Homepage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Homepage successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "landingpage") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Landingpage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Landingpage successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "servicecatalog") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_ServiceCatalog/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Service Catalog successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "signon") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_SignOn/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>SignOn successfully created</h1>"; 
+	}elseif ($_POST['pipeline'] == "complete") {
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		echo "<h1>Complete base architecture successfully created</h1>"; 
+	}else {
 		echo "<h1>error</h1>";
 	}
 	curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -54,7 +105,6 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 
 	// schließe den cURL-Handle und gib die Systemresourcen frei
 	curl_close($ch);
-	echo "<h1>Erzeugt</h1>";
 }
 
 ?>
