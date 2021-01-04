@@ -14,7 +14,19 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<h2>Jenkins trigger page</h2>
 		</div>
 
-		<iframe src="default_iframe.html" name="iframe_a">
+		<script type="application/javascript">
+			function resizeIFrameToFitContent(iFrame) {
+				iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
+				iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
+			}
+			window.addEventListener('DOMContentLoaded', function(e) {
+
+				var iFrame = document.getElementById('iframe_a');
+				resizeIFrameToFitContent(iFrame);
+			});
+		</script>
+
+		<iframe src="default_iframe.html" name="iframe_a" id="iframe_a">
 			<p>Your browser does not support iframes.</p>
 		</iframe>
 
@@ -74,28 +86,28 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 	} elseif ($_POST['pipeline'] == "adminspace") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Adminspace successfully created</h1>";
-	}elseif ($_POST['pipeline'] == "database") {
+	} elseif ($_POST['pipeline'] == "database") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>Database successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "databasejob") {
+		echo "<h1>Database successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "databasejob") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>DatabaseJob successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "homepage") {
+		echo "<h1>DatabaseJob successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "homepage") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Homepage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>Homepage successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "landingpage") {
+		echo "<h1>Homepage successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "landingpage") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Landingpage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>Landingpage successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "servicecatalog") {
+		echo "<h1>Landingpage successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "servicecatalog") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_ServiceCatalog/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>Service Catalog successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "signon") {
+		echo "<h1>Service Catalog successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "signon") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_SignOn/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>SignOn successfully created</h1>"; 
-	}elseif ($_POST['pipeline'] == "complete") {
+		echo "<h1>SignOn successfully created</h1>";
+	} elseif ($_POST['pipeline'] == "complete") {
 		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
-		echo "<h1>Complete base architecture successfully created</h1>"; 
-	}else {
+		echo "<h1>Complete base architecture successfully created</h1>";
+	} else {
 		echo "<h1>error</h1>";
 	}
 	curl_setopt($ch, CURLOPT_HEADER, 0);
