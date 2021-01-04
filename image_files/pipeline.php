@@ -14,11 +14,11 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<h2>Jenkins trigger page</h2>
 		</div>
 
-		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_blank" enctype="application/x-www-form-urlencoded">
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_self" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="multiuserlogin">
 		    <input type="submit" name="submit" value="multiuserlogin">
 	    </form>
-		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_blank" enctype="application/x-www-form-urlencoded">
+		<form action="http://130.211.228.246/base/admin/pipeline.php" method="post" target="_self" enctype="application/x-www-form-urlencoded">
 			<input type="hidden" name="pipeline" value="adminspace">
 		    <input type="submit" name="submit" value="adminspace">
 	    </form>
