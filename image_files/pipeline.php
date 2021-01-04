@@ -14,7 +14,7 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 			<h2>Jenkins trigger page</h2>
 		</div>
 
-		<iframe src="demo_iframe.htm" name="iframe_a">
+		<iframe src="default_iframe.html" name="iframe_a">
 			<p>Your browser does not support iframes.</p>
 		</iframe>
 
