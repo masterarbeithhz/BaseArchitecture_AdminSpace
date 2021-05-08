@@ -110,49 +110,49 @@ if (!isset($_POST['submit']) || !isset($_POST['pipeline'])) {
 
 	// setze die URL und andere Optionen
 	if ($_POST['pipeline'] == "multiuserlogin") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_MultiUserLogin/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Multiuserlogin successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "adminspace") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_AdminSpace/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Adminspace successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "database") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Database successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "databasejob") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>DatabaseJob successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "homepage") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Homepage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_Homepage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Homepage successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "landingpage") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Landingpage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_Landingpage/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Landingpage successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "servicecatalog") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_ServiceCatalog/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_ServiceCatalog/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Service Catalog successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "signon") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_SignOn/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_SignOn/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>SignOn successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "complete") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/BaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/BaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&base_groovy=base_config");
 		echo "<h1>Complete base architecture successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_administration") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Administration/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_Administration/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>UseCase Administration successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_database") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_Database/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>UseCase Database successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_databasejob") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_DatabaseJob/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>UseCase Database Job Catalog successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_processing") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Processing/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_Processing/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>UseCase Processing successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_visualization") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Visualization/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_Visualization/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>UseCase Visualization successfully created</h1>";
 	} elseif ($_POST['pipeline'] == "uc_complete") {
-		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@35.204.41.212/job/UseCaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
+		curl_setopt($ch, CURLOPT_URL, "http://user:cDAbHn8YJ8xN@34.66.151.214/job/UseCaseArchitecture_Complete/buildWithParameters?token=ajsklfj65465asfd465a65sd4f6a4f654asf6a4sfd64asf6&customer_groovy=tuebingen_config");
 		echo "<h1>Complete UseCase architecture successfully created</h1>";
 	} else {
 		echo "<h1>error</h1>";
