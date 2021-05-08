@@ -3,6 +3,7 @@ MAINTAINER Dan Pupius <dan@pupi.us>
 
 # Install apache, PHP, and supplimentary programs. openssh-server, curl, and lynx-cur are for debugging the container.
 RUN apt-get update && apt-get -y upgrade
+RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y apache2 php7.0 php7.0-mysql php-curl libapache2-mod-php7.0 curl lynx-cur --fix-missing
 
 # Enable apache mods.
