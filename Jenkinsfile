@@ -25,7 +25,7 @@ pipeline {
     stage("Load config") {
       steps {
         script {
-          load "${base_config}.groovy"
+          load "base_config.groovy"
           echo "${env.BA_CUSTOMER}"
           echo "${env.BA_DBNAME}"
           echo "${env.BA_DBUSER}"
